@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     int max_value{100};
     const std::string high_scores_filename = "high_scores.txt";
     int target_value{0};
-    bool not_win = true;
+    //bool not_win = true;
     std::string user_name;
     int attempts_count{0};
     
@@ -110,7 +110,7 @@ int main(int argc, char **argv)
 
 int random_number(int &max_value)
 {
-    std::srand(std::time(nullptr)); // use current time as seed for random generator
+    std::srand((unsigned int)std::time(nullptr)); // use current time as seed for random generator
     int random_value = std::rand() % max_value;
     return random_value;
 }
